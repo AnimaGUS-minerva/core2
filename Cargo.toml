@@ -16,6 +16,7 @@ default = ["std"]
 std = ["alloc"]
 alloc = []
 nightly = []
+compat = []
 
 [package.metadata.docs.rs]
 features = ["nightly"]

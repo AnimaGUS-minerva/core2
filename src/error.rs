@@ -11,6 +11,10 @@
 // coherence challenge (e.g., specialization, neg impls, etc) we can
 // reconsider what crate these items belong in.
 
+#[cfg(feature = "compat")]
+use core::alloc::LayoutErr;
+type LayoutError = LayoutErr;
+#[cfg(not(feature = "compat"))]
 use core::alloc::LayoutError;
 
 use core::any::TypeId;
